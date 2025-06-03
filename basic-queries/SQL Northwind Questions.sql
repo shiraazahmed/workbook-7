@@ -64,6 +64,11 @@ SELECT * FROM northwind.suppliers;
 -- 16. Examine the Products table. How do you know what supplier supplies
 -- each product? Write a query to list all of the items that "Tokyo Traders"
 -- supplies to Northwind
-SELECT * from northwind.products
-WHERE northwind.suppliers = 'Tokyo Traders';
+select SupplierId, CompanyName
+From Suppliers
+WHERE CompanyName = 'Tokyo Traders';
+
+SELECT ProductName
+FROM products
+WHERE SupplierId = 4;
 
